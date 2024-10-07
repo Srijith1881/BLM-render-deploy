@@ -3,8 +3,15 @@ const express = require('express');
 const router = express.Router();
 const Patient = require('../models/Patient');
 
+router.get('/', async ( req, res) => {
+    try{
+        res.send("This is working!!!! wow");
+    }catch (error){
+        res.status(404).json({error: "error"})
+    }  
+})
 // POST route to handle blood requests
-router.post('/blood-request', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const { name, emergency, location, age, gender, bloodGroup } = req.body;
 

@@ -1,4 +1,5 @@
 // config/db.js
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 // Connect to MongoDB using the URL from the .env file
