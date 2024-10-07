@@ -9,6 +9,11 @@ const patientSchema = new mongoose.Schema({
     gender: { type: String, required: true },
     bloodGroup: { type: String, required: true },
     createdAt: { type: Date, default: Date.now },
+    // status: {
+    //     type: String,
+    //     enum: ['pending', 'accepted', 'rejected'],
+    //     default: 'pending'
+    // }
 });
 
 const Patient = mongoose.model('Patient', patientSchema);

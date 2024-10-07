@@ -46,4 +46,26 @@ router.get('/',async (req,res) => {
     
 });
 
+// router.put('/update/:id', async (req, res) => {
+//     try {
+//         const { id } = req.params;
+//         const { status } = req.body;
+
+//         if (!['accepted', 'rejected'].includes(status)) {
+//             return res.status(400).json({ error: 'Invalid status. Must be either accepted or rejected.' });
+//         }
+
+//         const updatedPatient = await Patient.findByIdAndUpdate(id, { status }, { new: true });
+
+//         if (!updatedPatient) {
+//             return res.status(404).json({ error: 'Patient not found.' });
+//         }
+
+//         res.status(200).json({ message: `Blood request status updated to ${status}.`, updatedPatient });
+//     } catch (error) {
+//         console.error('Error updating blood request status:', error);
+//         res.status(500).json({ error: 'Server error. Please try again later.' });
+//     }
+// });
+
 module.exports = router;
