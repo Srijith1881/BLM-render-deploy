@@ -13,7 +13,9 @@ app.use(express.json());
 app.use(cors(
   {
     origin: ["https://blood-report-management.vercel.app/"],
-  }
+    methods: ["GET","PUT", "POST", "DELETE"],
+    credentials: true,
+  },
 ))
 
 // Routes
